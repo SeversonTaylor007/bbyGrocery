@@ -33,7 +33,9 @@ I tried to apply all the questions with answers an examples of how to replicate 
 HTTP METHOD
 
 
-Get a specific item - GET localhost:8080/products/1
+Get a specific item - 
+
+	GET localhost:8080/products/1
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
