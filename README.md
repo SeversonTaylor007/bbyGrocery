@@ -94,7 +94,7 @@ Steps to replicate/how I built this.
   d. I also ran into the issue of many of the versions that should work together not working, so ended up setting the parents version and taking away the rest for the spring boot dependencies
   
 2. Development 
-  a. Had to re-learn which annotations to use, it's been a while
+  a. Had to re-learn which annotations to use, it's BEAN a while
   
   b. Created Product class with name quantity and price as requested, I kept id as I like the unique identifier especially when calling api, keeps it simple
     b1. create getters/setters (would've been easier if using lombok as I later learned) 
