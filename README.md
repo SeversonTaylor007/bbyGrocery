@@ -41,7 +41,11 @@ Get N number of items(set by query parameter, max/default 100 items will be retu
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Create a new item- POST localhost:8080/products/ * Body - 
+Create a new item- 
+
+	POST localhost:8080/products/  
+
+* Body -
 {
     "name": "Orange",
     "quantity": 10,
