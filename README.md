@@ -58,7 +58,9 @@ Create a new item-
 
 Update an item - 
 
-	PUT localhost:8080/products/4 * Body -
+	PUT localhost:8080/products/4 
+	
+* Body -
 
 {
     "id": 3,
