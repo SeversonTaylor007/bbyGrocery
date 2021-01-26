@@ -86,17 +86,24 @@ Steps to replicate/how I built this.
 
 1. Start.spring.io
 	a. Maven Project on Java 8, Jar packaging
+	
 	b. Added dependencies specific to what I thought this would need (Spring WEB for RESTful connection and Tomcat, Spring Data JPA for JPA api, and H2 Database for in-memory JDBC api support)
+	
   c. I ended up with a lot of boilerplate from a rest guide, but it was old so I needed to add new dependencies apart from the spring starter like jakarta and jaxb to deal since these were deprecated in java 9 and later
+  
   d. I also ran into the issue of many of the versions that should work together not working, so ended up setting the parents version and taking away the rest for the spring boot dependencies
+  
 2. Development 
   a. Had to re-learn which annotations to use, it's been a while
+  
   b. Created Product class with name quantity and price as requested, I kept id as I like the unique identifier especially when calling api, keeps it simple
     b1. create getters/setters (would've been easier if using lombok as I later learned) 
     b2. set return string for product call
+    
   c. Created Repo using jpa repository to use for products 
      c1. had to create class to pre-load data into the database using bean and repository calls
      c2. add application.properties file for h2 path and datasource url/user/pass
+     
   d. Create Controller for get/post mapping for api calls
      d1. allows us to call the api and create new products, remove old ones, edit/update as well all in api body
      d2. create method for querying based on a set query parameter, max/default 100 items to be returned.
