@@ -41,7 +41,9 @@ Get a specific item -
 
 Get N number of items(set by query parameter, max/default 100 items will be returned) - PAGINATION - HAVE TO WORK ON THIS
 	
+	
 	GET localhost:8080/products?limit=100
+
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -79,7 +81,8 @@ Delete an item -
 
 	DELETE localhost:8080/products/4
 
-localhost:8080/products
+	GET localhost:8080/products
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
