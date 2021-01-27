@@ -5,8 +5,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Objects;
 
+
 @Entity
 class Product {
+    Product () {}
 
     private @Id @GeneratedValue Long id;
     private String name;

@@ -2,16 +2,7 @@ package bbyGrocery;
 
 import java.util.List;
 
-
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 class ProductController {
@@ -25,8 +16,10 @@ class ProductController {
 
 
     @GetMapping("/products")
-    List<Product> all() {
-        return repository.findAll();
+    List<Product> all(@RequestParam(required = false, defaultValue = "100") Integer limit) {
+        List<Product> name=repository.findAll();
+
+        return name.subList(0, limit);
     }
 
 
@@ -66,10 +59,5 @@ class ProductController {
         repository.deleteById(id);
     }
 
-    @GetMapping("/products/{name}")
-    Page<Product> findFirstHundredResultsByName(@PathVariable String name, Pageable pageable) {
-        Page<Product> products=repository.findAll(pageable);
-        return products;
-    }
 
 }
